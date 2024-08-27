@@ -14,8 +14,13 @@ module.exports = {
     node: true
   },
 
+  /*
+    Keeping the existing ESLint rules from `eslint-plugin-zero-config` for now to maintain stability.
+    We'll revisit this in the future to adopt more modern presets.
+  */
+
   rules: {
-    // -private/node/index.js
+    // https://github.com/Exelord/eslint-plugin-zero-config/blob/master/lib/configs/-private/node/index.js
     "node/callback-return": "error",
     "node/exports-style": "error",
     "node/file-extension-in-import": "error",
@@ -44,7 +49,7 @@ module.exports = {
     "node/process-exit-as-throw": "error",
     "node/shebang": "error",
 
-    // -private/eslint/best-practices.js
+    // https://github.com/Exelord/eslint-plugin-zero-config/blob/master/lib/configs/-private/eslint/best-practices.js
     "accessor-pairs": "error",
     "array-callback-return": "error",
     "block-scoped-var": "error",
@@ -72,7 +77,6 @@ module.exports = {
     "no-labels": "error",
     "no-lone-blocks": "error",
     "no-loop-func": "error",
-    "no-loss-of-precision": "error",
     "no-multi-spaces": "error",
     "no-multi-str": "error",
     "no-new": "error",
@@ -102,18 +106,7 @@ module.exports = {
     yoda: "error",
     "default-param-last": "error",
     "grouped-accessor-pairs": ["error", "getBeforeSet"],
-    "no-case-declarations": "error",
     "no-constructor-return": "error",
-    "no-empty-pattern": "error",
-    "no-fallthrough": "error",
-    "no-global-assign": "error",
-    "no-octal": "error",
-    "no-redeclare": "error",
-    "no-self-assign": "error",
-    "no-unused-labels": "error",
-    "no-useless-catch": "error",
-    "no-useless-escape": "error",
-    "no-with": "error",
     "prefer-regex-literals": "error",
 
     "class-methods-use-this": "off",
@@ -128,7 +121,7 @@ module.exports = {
     "no-warning-comments": "off",
     "require-await": "off",
 
-    // -private/eslint/es6.js
+    // https://github.com/Exelord/eslint-plugin-zero-config/blob/master/lib/configs/-private/eslint/es6.js
     "arrow-body-style": ["error", "as-needed"],
     "arrow-parens": "error",
     "arrow-spacing": "error",
@@ -164,68 +157,27 @@ module.exports = {
     "symbol-description": "error",
     "template-curly-spacing": "error",
     "yield-star-spacing": "error",
-    "constructor-super": "error",
-    "no-class-assign": "error",
-    "no-const-assign": "error",
-    "no-dupe-class-members": "error",
     "no-new-symbol": "error",
     "no-restricted-exports": "error",
-    "no-this-before-super": "error",
-    "require-yield": "error",
-
     "no-restricted-imports": "off",
     "prefer-arrow-callback": "off",
     "prefer-rest-params": "off",
     "sort-imports": "off",
 
-    // -private/eslint/possible-errors.js
+    // https://github.com/Exelord/eslint-plugin-zero-config/blob/master/lib/configs/-private/eslint/possible-errors.js
     "no-await-in-loop": "error",
     "no-console": "error",
     "no-extra-parens": ["error", "all", { enforceForArrowConditionals: false }],
     "no-template-curly-in-string": "error",
-    "for-direction": "error",
-    "getter-return": "error",
-    "no-async-promise-executor": "error",
-    "no-compare-neg-zero": "error",
-    "no-cond-assign": "error",
-    "no-constant-condition": "error",
-    "no-control-regex": "error",
-    "no-debugger": "error",
-    "no-dupe-args": "error",
-    "no-dupe-else-if": "error",
-    "no-dupe-keys": "error",
-    "no-duplicate-case": "error",
-    "no-empty": "error",
-    "no-empty-character-class": "error",
-    "no-ex-assign": "error",
-    "no-extra-boolean-cast": "error",
     "no-extra-semi": "error",
-    "no-func-assign": "error",
-    "no-import-assign": "error",
     "no-inner-declarations": "error",
-    "no-invalid-regexp": "error",
-    "no-irregular-whitespace": "error",
-    "no-misleading-character-class": "error",
-    "no-obj-calls": "error",
-    "no-prototype-builtins": "error",
-    "no-regex-spaces": "error",
-    "no-sparse-arrays": "error",
-    "no-unexpected-multiline": "error",
-    "no-unreachable": "error",
     "no-unreachable-loop": "error",
-    "no-unsafe-finally": "error",
-    "no-unsafe-negation": "error",
-    'no-unsafe-optional-chaining': 'error',
     "require-atomic-updates": "error",
-    "use-isnan": "error",
-    "valid-typeof": "error",
 
-    "no-setter-return": "off",
-
-    // -private/eslint/strict-mode.js
+    // https://github.com/Exelord/eslint-plugin-zero-config/blob/master/lib/configs/-private/eslint/strict-mode.js
     strict: 'error',
 
-    // -private/eslint/stylistic-issues.js
+    // https://github.com/Exelord/eslint-plugin-zero-config/blob/master/lib/configs/-private/eslint/stylistic-issues.js
     'array-bracket-newline': ['error', 'consistent'],
     'array-bracket-spacing': 'error',
     'array-element-newline': ['error', 'consistent'],
@@ -365,17 +317,11 @@ module.exports = {
     'sort-vars': 'off',
     'function-call-argument-newline': 'off',
 
-    // -private/eslint/variables.js
+    // https://github.com/Exelord/eslint-plugin-zero-config/blob/master/lib/configs/-private/eslint/variables.js
     "no-label-var": "error",
     "no-shadow": "error",
     "no-undef-init": "error",
     "no-use-before-define": ["error", { functions: false }],
-    "no-useless-backreference": "error",
-    "no-delete-var": "error",
-    "no-shadow-restricted-names": "error",
-    "no-undef": "error",
-    "no-unused-vars": "error",
-
     "init-declarations": "off",
     "no-undefined": "off",
     "no-restricted-globals": "off",
